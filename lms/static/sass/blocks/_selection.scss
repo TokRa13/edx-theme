@@ -34,5 +34,10 @@
             opacity: .4;
             cursor: default;
         }
+        &.passed {
+            pointer-events: none;
+            opacity: .4;
+            cursor: default;
+        }
     }
 }
