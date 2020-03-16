@@ -3448,6 +3448,7 @@ body .wrapper-account-settings .account-settings-container {
 .wrapper-account-settings {
     .account_settings_bg {
         max-width: 100%;
+        display: flex;
         flex-direction: column;
         height: auto;
         background: linear-gradient(286.04deg, $theme-header-link-color 0%, $theme-header-btn-color 100%);
@@ -3456,7 +3457,112 @@ body .wrapper-account-settings .account-settings-container {
             padding: 70px 15px 35px;
             box-sizing: border-box;
             max-width: 1230px;
+            width: 100%;
             margin: 0 auto;
+        }
+
+        h2,
+        .h2 {
+            font: 700 60px/72px 'Artegra Sans', sans-serif !important;
+            color: $theme-btn-white-text-color;
+            margin-bottom: 80px;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 85px;
+            box-sizing: border-box;
+
+            .account-settings-container {
+                margin-bottom: 0;
+            }
+        }
+
+        .view-profile {
+            .profile-image-field {
+                .image-wrapper {
+                    .image-frame {
+                        border-radius: 50%;
+                    }
+
+                    .u-field-upload-button {
+                        border-radius: 50%;
+                    }
+
+                    .upload-button-title,
+                    .upload-button-icon {
+                        font-size: 14px;
+                        color: $color7;
+                    }
+
+                    .upload-button-input {
+                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: -1;
+                    }
+
+                    .u-field-remove-button {
+                        text-shadow: none;
+                        color: $theme-btn-white-text-color;
+                        box-shadow: none;
+
+                        &:hover {
+                            color: $color7;
+                        }
+                    }
+                }
+            }
+
+            .password-reset-field {
+                .u-field-value {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 0;
+                    width: 100%;
+                    max-width: 200px;
+    
+                    .field-label {
+                        font-size: 0;
+                        background-image: url('../images/icon-lock.svg');
+                        width: 33px;
+                        height: 43px;
+                        margin: 0 auto;
+                    }
+    
+                    .u-field-link-title-password {
+                        border: 0;
+                        background-color: transparent;
+                        padding: 0;
+                        letter-spacing: 0.001em;
+                        text-transform: uppercase;
+                        font: 600 18px/24px 'Artegra Sans', sans-serif !important;
+                        color: $theme-btn-white-text-color;
+                        box-shadow: none;
+                        text-shadow: none;
+                        background-image: none;
+                        margin-top: 35px;
+    
+                        &:hover {
+                            background-image: none;
+                            color: $theme-header-btn-color;
+                        }
+                    }
+                }
+
+                .u-field-message-help {
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .account-settings-container {
+        .account-settings-header-subtitle {
+            display: none;
         }
     }
 }
