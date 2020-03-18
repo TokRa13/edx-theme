@@ -102,8 +102,13 @@ from courseware.courses import get_course_about_section
                     <div class="week-structure__box">
                         <ul class="week-structure__list">
                           % for subsection in section.get('children', []):
+                            <%
+                            is_checked = ''
+                            if subsection['last_accessed']:
+                              is_checked = 'is-checked'
+                            %>
                             <li class="week-structure__list-item">
-                                <div class="week-structure__helper"></div>
+                                <div class="week-structure__helper ${is_checked}"></div>
                                 <a
                                 class="outline-item focusable"
                                 href="${ subsection['lms_web_url'] }"
